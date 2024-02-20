@@ -69,6 +69,12 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
-  gem 'pry-rails'
-
 end
+
+group :development do
+  gem 'rubocop', require: false
+end
+
+gem 'pry-rails'
+gem "ruby-openai"
+
