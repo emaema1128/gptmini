@@ -1,23 +1,16 @@
 <h1>chatbot<h1>
-  <%= form_with  model: @post, url: "/chatbots", method: :post, id: "form", local: true do |f| %>
+  <%= form_with  model: @chatbot, url: "/chatbots", method: :chatbot, id: "form", local: true do |f| %>
     <%= f.text_field :content %>
     <%= f.submit '投稿する' , id: "submit" %>
   <% end %>  
 
-    <div id="list">
-    </div>
-
-<% @posts.each do |post| %>
-<div class="post">
-  <div class="post-date">
-    投稿日時：<%= post.created_at %>
+ <% @chatbots.each do |chatbot| %>
+<div class="chatbot">
+  <div class="chatbot-date">
+    投稿日時：<%= chatbot.created_at %>
   </div>
-  <div class="post-content">
-    <%= post.content %>
+  <div class="chatbot-content">
+    <%= chatbot.content %>
   </div>
 </div>
-<% end %>
- 
-
-
-
+<% end %> 
