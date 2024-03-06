@@ -1,7 +1,8 @@
 class ChatbotsController < ApplicationController
 
   def index
-     @chatbots = Chatbot.all.order("created_at DESC")
+    @chatbot = Chatbot.new
+    @chatbots = Chatbot.all.order("created_at DESC")
   end
 
   def create
