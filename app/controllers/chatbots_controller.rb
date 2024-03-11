@@ -6,7 +6,8 @@ class ChatbotsController < ApplicationController
   end
 
   def create
-    prompt = params[:prompt]
+    # p params[:chatbot][:content]
+    prompt = params[:chatbot][:content]
     service = ChatGptService.new
     response = service.chat(prompt)
     render json: { response: response }
