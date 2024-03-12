@@ -10,6 +10,13 @@ class ChatbotsController < ApplicationController
     prompt = params[:chatbot][:content]
     service = ChatGptService.new
     response = service.chat(prompt)
-    render json: { response: response }
+    p response
+    @chatbot = Chatbot.new(content: prompt, response: response)
+    if @chatbot.save
+      redirect_to chatbots_path, notice: 'Chatbot was successfully created.'
+    else
+      redirect_to chatbots_path, alert: 'Failed to create chatbot.'
+    end
   end
+
 end

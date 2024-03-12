@@ -12,7 +12,8 @@
 
 ActiveRecord::Schema[7.0].define(version: 2024_02_22_145632) do
   create_table "chatbots", charset: "utf8", force: :cascade do |t|
-    t.text "text"
+    t.text "content"
+    t.string "response"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
