@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+ .chatbot-date {
+  color: #999;
+  font-size: 12px;
+  padding-left: 10px;
+}
+
+
+ .chatbot-content {
+  color: #434a54;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+.chatbot-response {
+  color: #e35b0c;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
